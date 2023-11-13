@@ -1,5 +1,10 @@
 import express from "express";
-import { getAboutPage, getIndexPage, getRegisterPage, getLoginPage} from "../controllers/pageController.js";
+import {
+  getAboutPage,
+  getIndexPage,
+  getRegisterPage,
+  getLoginPage,
+} from "../controllers/pageController.js";
 
 const router = express.Router(); //Create new express router
 
