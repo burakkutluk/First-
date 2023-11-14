@@ -11,7 +11,7 @@ const checkUser = async (req, res, next) => {
         res.locals.user = null;
         next();
       } else {
-        const user = await User.findById(decodedToken.id);
+        const user = await User.findById(decodedToken.userId);
         res.locals.user = user;
         next();
       }
