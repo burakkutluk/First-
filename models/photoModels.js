@@ -17,6 +17,13 @@ const photoSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+  },
+  url: {
+    type: String,
+    required: true,
+  },
 });
 
 const Photo = mongoose.model("Photo", photoSchema);
