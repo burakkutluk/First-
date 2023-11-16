@@ -23,9 +23,15 @@
                   >Photos</a
                 >
               </li>
-              
 
               <% if(user){ %>
+
+              <li>
+                <a class="<%= link === 'users' && 'active' %>" href="/users"
+                  >Users</a
+                >
+              </li>
+
               <li>
                 <a href="/logout">Logout</a>
               </li>
@@ -38,21 +44,20 @@
               </li>
               <% } else { %>
 
-                <li>
-                  <a class="<%= link === 'login' && 'active' %>" href="/login"
-                    >Login</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="<%= link === 'register' && 'active' %>"
-                    href="/register"
-                    >Register</a
-                  >
-                </li>
+              <li>
+                <a class="<%= link === 'login' && 'active' %>" href="/login"
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  class="<%= link === 'register' && 'active' %>"
+                  href="/register"
+                  >Register</a
+                >
+              </li>
 
               <% } %>
-
 
               <!-- <li><a href="services">Services</a></li>
               <li><a href="projects.html">Projects</a></li>
