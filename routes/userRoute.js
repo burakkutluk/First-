@@ -11,5 +11,7 @@ router
   .get(authMiddlewares.authenticateToken, userController.getDashboardPage);
 router.route("/").get(userController.getAllUsers);
 router.route("/:id").get(userController.getAUser);
+router.route("/:id/follow").put(authMiddlewares.authenticateToken, userController.follow);
+router.route("/:id/unfollow").put(authMiddlewares.authenticateToken, userController.unfollow);
 
 export default router;
