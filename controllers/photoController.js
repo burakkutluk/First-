@@ -48,7 +48,6 @@ const getAllPhotos = async (req, res) => {
       error,
     });
   }
-  
 };
 
 const getAPhoto = async (req, res) => {
