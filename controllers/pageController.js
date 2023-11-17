@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
 
 //to define page routes in web applications
 const getIndexPage = (req, res) => {
@@ -129,9 +129,9 @@ const sendMail = async (req, res) => {
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                       <tr>
                         <td>
-                          <p>Email: ${req.body.email}</p>
-                          <p>Name: ${req.body.name}</p>
-                          <p>Message: ${req.body.message}</p>
+                          <p>Email: ${req.body.Email}</p>
+                          <p>Name: ${req.body.Name}</p>
+                          <p>Message: ${req.body.Message}</p>
                         </td>
                       </tr>
                     </table>
@@ -164,17 +164,11 @@ const sendMail = async (req, res) => {
       },
     });
 
-    // async..await is not allowed in global scope, must use a wrapper
-    async function main() {
-      // send mail with defined transport object
-      await transporter.sendMail({
-        to: "burak2001b@gmail.com", // list of receivers
-        subject: `MAIL FROM ${req.body.email}`, // Subject line
-        html: htmlTemplate, // html body
-      });
-    }
-
-    
+    await transporter.sendMail({
+      to: "burak2001b@gmail.com", // list of receivers
+      subject: `MAIL FROM ${req.body.Email}`, // Subject line
+      html: htmlTemplate, // html body
+    });
 
     res.status(200).json({ succeded: true });
   } catch (error) {
